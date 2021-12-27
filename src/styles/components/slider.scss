@@ -20,44 +20,39 @@
   }
 }
 
-.slider ul {
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
+.slider {
+  & ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  & li {
+    width: 100%;
+    position: absolute;
+    top: -325px;
+    list-style: none;
+  }
 
-.slider li {
-  width: 100%;
-  //width: 680px;
-  //height: 420px;
-  position: absolute;
-  top: -325px; /* Original Position - Outside of the Slider */
-  list-style: none;
-}
+  & li.firstanimation {
+    animation: cycle 25s linear infinite;
+  }
+  & li.secondanimation {
+    animation: cycletwo 25s linear infinite;
+  }
+  & li.thirdanimation {
+    animation: cyclethree 25s linear infinite;
+  }
+  & li.fourthanimation {
+    animation: cyclefour 25s linear infinite;
+  }
+  & li.fifthanimation {
+    animation: cyclefive 25s linear infinite;
+  }
 
-.slider li.firstanimation {
-  animation: cycle 25s linear infinite;
-}
-
-.slider li.secondanimation {
-  animation: cycletwo 25s linear infinite;
-}
-
-.slider li.thirdanimation {
-  animation: cyclethree 25s linear infinite;
-}
-
-.slider li.fourthanimation {
-  animation: cyclefour 25s linear infinite;
-}
-
-.slider li.fifthanimation {
-  animation: cyclefive 25s linear infinite;
-}
-
-.slider:hover li,
-.slider:hover .progress-bar {
-  animation-play-state: paused;
+  &:hover li,
+  &:hover .progress-bar {
+    animation-play-state: paused;
+  }
 }
 
 /* PROGRESS BAR */
@@ -66,10 +61,6 @@
   height: 3px;
   background: #000;
   animation: fullexpand 25s ease-out infinite;
-}
-
-#test {
-
 }
 
 /* ANIMATION */
