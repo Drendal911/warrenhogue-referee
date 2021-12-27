@@ -1,38 +1,184 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+html {
+  background-image: url("images/headerBackground.jpg");
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#content-slider {
+  width: 100%;
+  height: 40vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#slider img {
+  max-width: 100%;
+}
+
+/* SLIDER STRUCTURE */
+
+#slider {
+  background: #000;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.7);
+  margin: 1.5rem auto auto auto;
+  height: 40vh;
+  width: 98%;
+  max-width: 1980px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* HIDE ALL OUTSIDE OF THE SLIDER */
+
+/*#mask {*/
+/*  overflow: hidden;*/
+/*  height: 40vh;*/
+/*  !* height: 320px; *!*/
+/*}*/
+
+/* IMAGE LIST */
+
+#slider ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#slider li {
+  width: 100%;
+  /* width: 680px;  /* Width Image */
+  height: 320px; /* Height Image */
+  position: absolute;
+  top: -325px; /* Original Position - Outside of the Slider */
+  list-style: none;
+}
+
+#slider li.firstanimation {
+  animation: cycle 25s linear infinite;
+}
+
+#slider li.secondanimation {
+  animation: cycletwo 25s linear infinite;
+}
+
+#slider li.thirdanimation {
+  animation: cyclethree 25s linear infinite;
+}
+
+#slider li.fourthanimation {
+  animation: cyclefour 25s linear infinite;
+}
+
+#slider li.fifthanimation {
+  animation: cyclefive 25s linear infinite;
+}
+
+#slider:hover li,
+#slider:hover .progress-bar {
+  animation-play-state: paused;
+}
+
+/* PROGRESS BAR */
+
+.progress-bar {
+  height: 3px;
+  background: #000;
+  animation: fullexpand 25s ease-out infinite;
+}
+
+
+/* ANIMATION */
+
+@keyframes cycle {
+  0%  { top: 0px; } /* When you start the slide, the first image is already visible */
+  4%  { top: 0px; } /* Original Position */
+  16% { top: 0px; opacity:1; z-index:0; } /* From 4% to 16 % = for 3 seconds the image is visible */
+  20% { top: 325px; opacity: 0; z-index: 0; } /* From 16% to 20% = for 1 second exit image */
+  21% { top: -325px; opacity: 0; z-index: -1; } /* Return to Original Position */
+  92% { top: -325px; opacity: 0; z-index: 0; }
+  96% { top: -325px; opacity: 0; } /* From 96% to 100% = for 1 second enter image*/
+  100%{ top: 0px; opacity: 1; }
+}
+
+@keyframes cycletwo {
+  0%  { top: -325px; opacity: 0; } /* Original Position */
+  16% { top: -325px; opacity: 0; }/* Starts moving after 16% to this position */
+  20% { top: 0px; opacity: 1; }
+  24% { top: 0px; opacity: 1; }  /* From 20% to 24% = for 1 second enter image*/
+  36% { top: 0px; opacity: 1; z-index: 0; }   /* From 24% to 36 % = for 3 seconds the image is visible */
+  40% { top: 325px; opacity: 0; z-index: 0; } /* From 36% to 40% = for 1 second exit image */
+  41% { top: -325px; opacity: 0; z-index: -1; }   /* Return to Original Position */
+  100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+  0%  { top: -325px; opacity: 0; }
+  36% { top: -325px; opacity: 0; }
+  40% { top: 0px; opacity: 1; }
+  44% { top: 0px; opacity: 1; }
+  56% { top: 0px; opacity: 1; }
+  60% { top: 325px; opacity: 0; z-index: 0; }
+  61% { top: -325px; opacity: 0; z-index: -1; }
+  100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefour {
+  0%  { top: -325px; opacity: 0; }
+  56% { top: -325px; opacity: 0; }
+  60% { top: 0px; opacity: 1; }
+  64% { top: 0px; opacity: 1; }
+  76% { top: 0px; opacity: 1; z-index: 0; }
+  80% { top: 325px; opacity: 0; z-index: 0; }
+  81% { top: -325px; opacity: 0; z-index: -1; }
+  100%{ top: -325px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclefive {
+  0%  { top: -325px; opacity: 0; }
+  76% { top: -325px; opacity: 0; }
+  80% { top: 0px; opacity: 1; }
+  84% { top: 0px; opacity: 1; }
+  96% { top: 0px; opacity: 1; z-index: 0; }
+  100%{ top: 325px; opacity: 0; z-index: 0; }
+}
+
+/* ANIMATION BAR */
+
+@keyframes fullexpand {
+  /* In these keyframes, the progress-bar is stationary */
+  0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
+
+  /* In these keyframes, the progress-bar starts to come alive */
+  4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.3; }
+
+  /* In these keyframes, the progress-bar moves forward for 3 seconds */
+  16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.7; }
+
+  /* In these keyframes, the progress-bar has finished his path */
+  17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.3; }
+
+  /* In these keyframes, the progress-bar will disappear and then resume the cycle */
+  18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
+}
+
+
+@media screen and (max-width: 1025px) {
+  #content-slider {
+    width: 95%;
+    margin: auto;
+    height: 20vh;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  #slider {
+    margin: .5rem auto auto auto;
+    height: 19.6vh;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    background: #000;
+    box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.7);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
   }
 }
