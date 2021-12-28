@@ -1,11 +1,11 @@
 import React from "react";
-import {slider} from "../styles";
+import "../styles/components/slider.scss";
 import {img_1, img_2, img_3, img_4, img_5} from "../images";
 
 
 export default function Slider() {
     return (
-        <div className={slider.contentSlider}>
+        <div className="content-slider">
             <div className="slider">
                 <ul>
                     <li className="firstanimation">

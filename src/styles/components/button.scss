@@ -1,0 +1,23 @@
+@import "../abstracts/variables";
+
+.button_container {
+  box-sizing: border-box;
+  @include shadow;
+  border-radius: 100px;
+  border: 5px black;
+  margin: 2rem auto 0 auto;
+  overflow: hidden;
+  max-width: 15rem;
+  font-size: 1.5rem;
+  background: $color-main;
+  color: white;
+  padding: .7rem;
+  @extend %btn-hover-active;
+}
+
+@media screen and (max-width: 1025px){
+  .button_container {
+    margin: 1rem auto 0 auto;
+    @include no-hover-no-active;
+  }
+}
