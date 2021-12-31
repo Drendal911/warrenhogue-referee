@@ -20,20 +20,6 @@ html {
   padding-bottom: 17rem;
 }
 
-
-.thumbnail {
-  position: absolute;
-  top: 0;
-  z-index: -5000;
-  width: 0;
-  height: 0;
-  & img {
-    object-fit: cover;
-    width: 0;
-    height: 0;
-  }
-}
-
 .associations {
   margin: 1rem 3rem 1rem 3rem;
   padding-bottom: 1.5rem;
