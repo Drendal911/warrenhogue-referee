@@ -10,7 +10,7 @@ function App() {
     return (
         <div className="App">
             <div className="thumbnail">
-                <img src="./images/1280x640_basketball_thumbnail.jpg" alt="Basketball Referee Image"/>
+                <img src="./images/1280x640_basketball_thumbnail.jpg" alt="Basketball Referee"/>
             </div>
             <div className="content_wrap">
                 <Slider/>
