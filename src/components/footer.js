@@ -8,7 +8,7 @@ export default function MyFooter() {
             <div className="footer_container">
                 <div className="contact">
                     <h1 className="footer_header">Contact Me</h1>
-                    <address><a href="mailto:warren.hogue@memphistn.gov">warren.hogue@memphistn.gov</a></address>
+                    <address><a href="mailto:kappanova7@gmail.com">warren.hogue@memphistn.gov</a></address>
                 </div>
                 <div className="allIconsContainer">
                         <a href="https://www.linkedin.com/in/warren-hogue-a09299b2/" target="_blank" rel="noopener noreferrer" className="icon_container">
