@@ -5,19 +5,13 @@ import ContentCard from "./components/card";
 import Footer from "./components/footer"
 import Button from "./components/button";
 import {tssaa} from "./images";
-import {useState} from "react";
 
 function App() {
-    const [city, setCity] = useState("");
-
-    function valueChange(e) {
-        setCity(e.target.value);
-        console.log(city);
-    }
-
-
     return (
         <div className="App">
+            <div className="thumbnail">
+                <img src="./images/tssaa-logo-white-block-smaller.png" alt="tssaa logo"/>
+            </div>
             <div className="content_wrap">
                 <Slider/>
                 <ContentCard name={"Warren Hogue"}

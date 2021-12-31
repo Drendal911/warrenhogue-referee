@@ -17,7 +17,21 @@ html {
 }
 
 .content_wrap {
-  padding-bottom: 20rem;
+  padding-bottom: 17rem;
+}
+
+
+.thumbnail {
+  position: absolute;
+  top: 0;
+  z-index: -5000;
+  width: 0px;
+  height: 0px;
+  & img {
+    object-fit: cover;
+    width: 0px;
+    height: 0px;
+  }
 }
 
 .associations {
@@ -45,6 +59,10 @@ html {
 }
 
 @media screen and (max-width: 1025px){
+  .content_wrap {
+    padding-bottom: 14rem;
+  }
+
   .associations {
     display: grid;
     gap: 1rem;
