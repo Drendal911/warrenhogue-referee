@@ -10,7 +10,7 @@ function App() {
     return (
         <div className="App">
             <div className="thumbnail">
-                <img src="./images/tssaa-logo-white-block-smaller.png" alt="tssaa logo"/>
+                <img src="./images/1280x640_basketball_thumbnail.jpg" alt="Basketball Referee Image"/>
             </div>
             <div className="content_wrap">
                 <Slider/>
