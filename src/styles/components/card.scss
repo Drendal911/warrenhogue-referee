@@ -1,22 +1,10 @@
 @import "../abstracts/variables";
 
 .card-container {
-  box-sizing: border-box;
-  @include shadow;
-  border-radius: 5px;
-  border: 5px black;
-  width: 75%;
-  margin: 2rem auto 0 auto;
-  overflow: hidden;
+  @extend %card-container;
 
   & .grid-container {
-    background: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
+    @extend %grid-container;
     & img {
       width: 10rem;
       margin-right: 2.5rem;
@@ -31,6 +19,13 @@
   color: $color-main;
 }
 
+.min-content-container {
+  @extend %card-container;
+  width: min-content;
+  & .grid-container {
+    @extend %grid-container;
+  }
+}
 
 
 
@@ -41,7 +36,7 @@
   }
 
   .card-container {
-    width: 95%;
+    max-width: 95%;
     margin: .5rem auto 0 auto;
     & .grid-container {
       gap: 0;

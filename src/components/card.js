@@ -1,17 +1,27 @@
 import React from "react";
 import "../styles/components/card.scss";
-import {tssaa} from "../images";
 
 export default function ContentCard(props) {
     return (
         <>
-            <div className="card-container">
-                <div className="grid-container">
-                    <img src={tssaa} alt="TSSAA Logo"/>
-                    <div className="card-content">{props.name ? props.name : null}</div>
-                    <div className="card-content">{props.title ? props.title : null}</div>
+            {props.type === "min-content" ? <div className="min-content-container">
+                    <div className="grid-container">
+                        {props.image ? props.image : null}
+                        {props.name ? <div className="card-content">{props.name}</div> : null}
+                        {props.title ? <div className="card-content">{props.title}</div> : null}
+                        {props.info ? props.info : null}
+                    </div>
                 </div>
-            </div>
+                :
+                <div className="card-container">
+                    <div className="grid-container">
+                        {props.image ? props.image : null}
+                        {props.name ? <div className="card-content">{props.name}</div> : null}
+                        {props.title ? <div className="card-content">{props.title}</div> : null}
+                        {props.info ? props.info : null}
+                    </div>
+                </div>
+            }
         </>
 
     )

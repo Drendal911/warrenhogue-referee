@@ -2,22 +2,21 @@
 
 .button_container {
   box-sizing: border-box;
-  @include shadow;
   border-radius: 100px;
-  border: 5px black;
   margin: 2rem auto 0 auto;
-  overflow: hidden;
-  max-width: 15rem;
   font-size: 1.5rem;
+  font-weight: 500;
   background: $color-main;
   color: white;
-  padding: .7rem;
+  padding: 1rem;
+  @include shadow;
   @extend %btn-hover-active;
 }
 
 @media screen and (max-width: 1025px){
   .button_container {
-    margin: 1rem auto 0 auto;
+    font-size: 1.2rem;
+    margin: 2rem auto .5rem auto;
     @include no-hover-no-active;
   }
 }

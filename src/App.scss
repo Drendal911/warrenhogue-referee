@@ -10,3 +10,59 @@ html {
   max-width: 1980px;
   margin: auto;
 }
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content_wrap {
+  padding-bottom: 20rem;
+}
+
+.associations {
+  margin: 1rem 3rem 1rem 3rem;
+  padding-bottom: 1.5rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 20rem 20rem;
+  width: min-content;
+  & .associations_header {
+    font-size: 4rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  & .associations_list_header {
+    font-size: 3rem;
+    text-decoration: underline;
+  }
+  & ul {
+    list-style-type: none;
+  }
+  & li {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1025px){
+  .associations {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    & .associations_header {
+      font-size: 3rem;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    & .associations_list_header {
+      font-size: 2rem;
+      text-decoration: underline;
+    }
+    & ul {
+      list-style-type: none;
+    }
+    & li {
+      font-size: 1.5rem;
+    }
+  }
+}
