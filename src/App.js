@@ -4,7 +4,7 @@ import Slider from "./components/slider";
 import ContentCard from "./components/card";
 import Footer from "./components/footer"
 import Button from "./components/button";
-import {tssaa} from "./images";
+import {fBIcon, instagramIcon, linkedInIcon, tssaa} from "./images";
 
 function App() {
     return (
@@ -37,7 +37,23 @@ function App() {
                 </ContentCard>
                 <Button name={"More on TSSAA"}
                         link={"https://tssaa.org/"}/>
-                <Footer/>
+                <Footer header={"Contact Me"}
+                        email={"kappanova7@gmail.com"}
+                        links={<>
+                            <a href="https://www.linkedin.com/in/warren-hogue-a09299b2/" target="_blank"
+                               rel="noopener noreferrer" className="icon_container">
+                                <img src={linkedInIcon} height="35px" alt={"LinkedIn Icon"}/>
+                            </a>
+                            <a href="https://www.instagram.com/warren_hogue/?hl=en" target="_blank"
+                               rel="noopener noreferrer"
+                               className="icon_container">
+                                <img src={instagramIcon} width="35px" alt={"Instagram Icon"}/>
+                            </a>
+                            <a href="https://www.facebook.com/Warren.Hogue.IV" target="_blank" rel="noopener noreferrer"
+                               className="icon_container">
+                                <img src={fBIcon} width="50px" alt="Facebook Icon"/>
+                            </a>
+                        </>}/>
 
             </div>
         </div>
