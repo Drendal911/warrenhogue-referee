@@ -38,7 +38,7 @@ function App() {
                 <Button name={"More on TSSAA"}
                         link={"https://tssaa.org/"}/>
                 <Footer header={"Contact Me"}
-                        email={"kappanova7@gmail.com"}
+                        email={"warren.hogue.iv@gmail.com"}
                         links={<>
                             <a href="https://www.linkedin.com/in/warren-hogue-a09299b2/" target="_blank"
                                rel="noopener noreferrer" className="icon_container">
