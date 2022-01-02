@@ -12,8 +12,8 @@ function App() {
             <div className="content_wrap">
                 <Slider/>
                 <Card name={"Warren Hogue"}
-                             title={"TSSAA Certified Referee"}
-                             image={<img src={tssaa} alt="TSSAA Logo"/>}/>
+                      title={"TSSAA Certified Referee"}
+                      image={<img src={tssaa} alt="TSSAA Logo"/>}/>
                 <Card type={"min_content"} info={
                     <div className={"associations"}>
                         <h1 className={"associations_header"}>Associations</h1>
@@ -54,7 +54,6 @@ function App() {
                                 <img src={fBIcon} width="50px" alt="Facebook Icon"/>
                             </a>
                         </>}/>
-
             </div>
         </div>
     );
