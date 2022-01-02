@@ -1,7 +1,7 @@
 import React from "react";
 import './App.scss';
 import Slider from "./components/slider";
-import ContentCard from "./components/card";
+import Card from "./components/card";
 import Footer from "./components/footer"
 import Button from "./components/button";
 import {fBIcon, instagramIcon, linkedInIcon, tssaa} from "./images";
@@ -11,10 +11,10 @@ function App() {
         <div className="App">
             <div className="content_wrap">
                 <Slider/>
-                <ContentCard name={"Warren Hogue"}
+                <Card name={"Warren Hogue"}
                              title={"TSSAA Certified Referee"}
                              image={<img src={tssaa} alt="TSSAA Logo"/>}/>
-                <ContentCard type={"min-content"} info={
+                <Card type={"min_content"} info={
                     <div className={"associations"}>
                         <h1 className={"associations_header"}>Associations</h1>
                         <div className={"associations__basketball"}>
@@ -34,7 +34,7 @@ function App() {
                         </div>
                     </div>
                 }>
-                </ContentCard>
+                </Card>
                 <Button name={"More on TSSAA"}
                         link={"https://tssaa.org/"}/>
                 <Footer header={"Contact Me"}

@@ -47,7 +47,7 @@ $color-main: #004a87;
   }
 }
 
-%card-container {
+%card_container {
   box-sizing: border-box;
   @include shadow;
   border-radius: 5px;
@@ -57,7 +57,7 @@ $color-main: #004a87;
   overflow: hidden;
 }
 
-%grid-container {
+%grid_container {
   background: white;
   display: flex;
   flex-direction: row;
