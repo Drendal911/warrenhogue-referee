@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/warrenhogue-referee/static/css/main.35263bc3.css",
+    "main.js": "/warrenhogue-referee/static/js/main.83eceaf2.js",
+    "static/js/787.c9c2c906.chunk.js": "/warrenhogue-referee/static/js/787.c9c2c906.chunk.js",
+    "static/media/img_3.jpg": "/warrenhogue-referee/static/media/img_3.e079f703a0509902f908.jpg",
+    "static/media/img_4.jpg": "/warrenhogue-referee/static/media/img_4.8a3c4a0b2c4c08e15a5f.jpg",
+    "static/media/img_2.jpg": "/warrenhogue-referee/static/media/img_2.b7ec831ff9f10c00f941.jpg",
+    "static/media/img_1.jpg": "/warrenhogue-referee/static/media/img_1.02afeb1079c0188b0b22.jpg",
+    "static/media/headerBackground.jpg": "/warrenhogue-referee/static/media/headerBackground.9253e13fee6457fb29e1.jpg",
+    "static/media/img_5.jpg": "/warrenhogue-referee/static/media/img_5.954e9388e77090d1dd06.jpg",
+    "static/media/facebook-logo-white.png": "/warrenhogue-referee/static/media/facebook-logo-white.df322f48c51089c449ee.png",
+    "static/media/1280x640_basketball_thumbnail.jpg": "/warrenhogue-referee/static/media/1280x640_basketball_thumbnail.415870b03c99f023b86f.jpg",
+    "static/media/instagram-icon-white.png": "/warrenhogue-referee/static/media/instagram-icon-white.4fae33bb3996b4426ed1.png",
+    "static/media/tssaa-logo-white-block-smaller.png": "/warrenhogue-referee/static/media/tssaa-logo-white-block-smaller.aa4a617ac3d88b7f646f.png",
+    "index.html": "/warrenhogue-referee/index.html",
+    "main.35263bc3.css.map": "/warrenhogue-referee/static/css/main.35263bc3.css.map",
+    "main.83eceaf2.js.map": "/warrenhogue-referee/static/js/main.83eceaf2.js.map",
+    "787.c9c2c906.chunk.js.map": "/warrenhogue-referee/static/js/787.c9c2c906.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35263bc3.css",
+    "static/js/main.83eceaf2.js"
+  ]
+}
